@@ -10,7 +10,7 @@ bank_struct* create_bank(int num_accounts, int max_balance){
         std::cout << "Number of accounts should be greater than 0\n";
         return 0;
     }
-
+ 
     key_t key = ftok("bank.h", 'R');
     if(key == -1){
         perror("ftok");
