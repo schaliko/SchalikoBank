@@ -1,6 +1,8 @@
 #include "bank.h"
 #include <iostream>
 #include <sys/shm.h>
+#include <sys/ipc.h>
+#include <errno.h>
 
 // Create a bank with the given number of accounts and maximum balance
 bank_struct* create_bank(int num_accounts, int max_balance){
