@@ -11,7 +11,7 @@ bank_struct* create_bank(int num_accounts, int max_balance){
         return 0;
     }
  
-    key_t key = ftok("bank.h", 'R');
+    key_t key = ftok("shm_file.txt", 'R');
     if(key == -1){
         perror("ftok");
         exit(1);

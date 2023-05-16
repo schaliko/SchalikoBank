@@ -5,7 +5,7 @@
 // Function to destroy the shared memory segment
 void *destroy_bank(){
     // Generate a unique key for the shared memory segment
-    key_t key = ftok("bank.h", 'R');
+    key_t key = ftok("shm_file.txt", 'R');
     if(key == -1){
         perror("ftok");
         exit(1);
